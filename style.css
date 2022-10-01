@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 5rem;
+    min-height: 100vh;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 7rem;
+    font-weight: 100;
+    letter-spacing: .5px;
+    margin-top: 2rem;
+    cursor: pointer;
+    text-shadow: 4px 2px 11px rgba(255,255,255,0.5);
+}
+
+.header-p {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    text-shadow: 4px 2px 9px rgba(255,255,255,0.42);
+}
+
+.header-info {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    text-shadow: 4px 2px 9px rgba(255,255,255,0.42);
+}
+
+.header-info i {
+    font-size: 1.8rem;
+    color: rgb(139, 181, 140);
+}
+
+
+.header form {
+    margin-top: 3em;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.header form input{
+    width: 30%;
+    height: 3.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    font-size: 1.6rem;
+    padding-left: 1rem;
+    box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.82);
+}
+
+.header form button {
+    width: 5rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    height: 3.5rem;
+    cursor: pointer;
+    background-color: rgb(197, 197, 197);
+    box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.82);
+}
+
+#result-heading {
+    margin-top: 10rem;
+}
+
+
+/* photolio */
+
+.photolio {
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 15rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    max-width: 42rem;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.photo img {
+    width: 100%;
+}
+
+.photo .img-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: .2s;
+}
+
+.photo:hover {
+    transform: scale(1.08, 1.08);
+    transition: .2s;
+    opacity: .9;
+
+}
+
+.photo:hover .img-info {
+    opacity: 1;
+}
+
+.like-div {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.img-info i {
+    font-size: 2rem;
+}
+
+.buttoning {
+    cursor: pointer;
+    border: none;
+    padding: .7rem;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.download {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download p a {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: white;
+    text-decoration: none;
+}
+
+.download a {
+    color: black;
+}
+
+
+
+.pages {
+    margin-top: 6rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.pages ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.pages ul li {
+    padding: .4rem 1rem;
+    border-radius: 3px;
+    font-size: 1.8rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.4);
+
+}
+
+
+.active {
+    background-color: white;
+    color: black;
+}
+
+
+@media screen and (max-width: 800px) {
+    .header form input{
+        width: 60%;
+        font-size: 1.4rem;
+    }
+    #result-heading {
+        margin-top: 5rem;
+    }
+    .photolio {
+        flex-wrap: wrap;
+    }
+    .photo {
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .header h1 {
+        font-size: 4rem;
+    }
+
+    .header-p {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .header-info {
+        text-align: center;
+    }
+    .header form input {
+        width: 80%;
+    }
+    .photo {
+        width: 100%;
+        margin: 2rem 0;
+    }
+}

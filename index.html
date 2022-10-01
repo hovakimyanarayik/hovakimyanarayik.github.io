@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 id="home" title="Home">Photolio</h1>
+            <p class="header-p">Search, find and download photos</p>
+            <p class="header-info">More than <i>8000</i> pictures...</p>
+            <form id="form">
+                <input type="text" id="search" placeholder="Search for a picture that interests you">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <p class="header-p" id="result-heading"></p>
+        </div>
+        <div class="photolio" id="photolio"></div>
+        <div class="pages">
+            <ul id="pages-list">
+                <li class="page active">1</li>
+                <li class="page">2</li>
+                <li class="page">3</li>
+                <li class="page">4</li>
+                <li class="page">5</li>
+            </ul>
+        </div>
+    </div>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
+
+
